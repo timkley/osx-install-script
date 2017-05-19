@@ -2,7 +2,7 @@
 
 # Remove all old preferences
 rm -rf ./pref
-mkdir -p ./pref/{ssh,Tunnelblick,dnsmasq}
+mkdir -p ./pref/{ssh,Tunnelblick,dnsmasq,iTerm}
 
 cp -R "$HOME/.ssh/" "./pref/ssh/"
 echo "SSH settings and keys copied."
@@ -28,6 +28,11 @@ echo "Alfred settings copied."
 # Sublime Text 3 settings
 cp -R "$HOME/Library/Application Support/Sublime Text 3" "./pref"
 echo "Sublime Text 3 settings copied."
+
+# iTerm settings
+cp "$HOME/Library/Preferences/com.googlecode.iterm2.plist" "./pref/iTerm/"
+wget "https://github.com/powerline/fonts/blob/master/SourceCodePro/Source Code Pro for Powerline.otf" -P "./pref/iTerm"
+echo "iTerm settings copied."
 
 # dnsmasq
 # see: https://passingcuriosity.com/2013/dnsmasq-dev-osx/
