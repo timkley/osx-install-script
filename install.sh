@@ -22,6 +22,9 @@ brew install dnsmasq
 cp "./pref/dnsmasq/dnsmasq.conf" "/usr/local/etc/"
 sudo cp -R "./pref/dnsmasq/resolver" "/etc/"
 sudo brew services start dnsmasq
+# Install up to date PHP version
+brew tap homebrew/php
+brew install php71
 
 # For everything not terminal related we install Cask
 brew install cask
