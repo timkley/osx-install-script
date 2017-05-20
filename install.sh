@@ -1,6 +1,6 @@
 #/bin/bash
 
-# Copy SSH Keys etc
+# Copy SSH Keys
 mkdir $HOME/.ssh
 cp -R "./pref/ssh/" "$HOME/.ssh/"
 
@@ -11,10 +11,12 @@ brew update
 # Just to be sure everything's ready
 brew doctor
 
-# Install the things from homebrew which we need
+# Installing node
 brew install node
 # Using yarn instead of npm as package manager
 brew install yarn
+# Install wget as easier nice alternative to CURL
+brew install wget
 # Install dnsmasq for better resolution of dev-domains
 brew install dnsmasq
 cp "./pref/dnsmasq/dnsmasq.conf" "/usr/local/etc/"
