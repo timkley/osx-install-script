@@ -226,6 +226,3 @@ defaults write com.apple.mail DisableInlineAttachmentViewing -bool true
 # Disable spotlight and remove shortcut                                       #
 ###############################################################################
 sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.metadata.mds.plist
-
-
-echo "Done. Restart your after installation of oh-my-zsh for these changes to take effect."
