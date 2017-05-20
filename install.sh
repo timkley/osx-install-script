@@ -39,12 +39,19 @@ brew services start mysql
 sleep 1
 mysqladmin -u root password 'root'
 
-# Install an alternative shell, http://fishshell.com in this case
-brew install fish
-# Add fish to the list of allowed shells
-sudo sh -c "echo /usr/local/bin/fish >> /etc/shells"
-# change the shell to fish after the install script has run
-chsh -s /usr/local/bin/fish
+# install zsh
+brew install zsh zsh-completions
+# install oh-my-zsh
+git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
+cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
+sed -i.bak "s/robbyrussell/agnoster/" ~/.zshrc
+echo 'DEFAULT_USER="tk"' >> ~/.zshrc
+chsh -s /bin/zsh
+
+# Install Source Code Pro powerline font
+git clone https://github.com/powerline/fonts.git
+sh fonts/install.sh "Source Code Pro"
+rm -rf fonts
 
 # For everything not terminal related we install Cask
 brew install cask
