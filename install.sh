@@ -24,31 +24,8 @@ sudo brew services start dnsmasq
 # For everything not terminal related we install Cask
 brew install cask
 
-brew cask install 1password
-brew cask install alfred
-cp -R "./pref/Alfred 3" "$HOME/Library/Application Support"
-brew cask install bettertouchtool
-brew cask install cyberduck
-brew cask install dropbox
-brew cask install firefox
-brew cask install flux
-brew cask install google-chrome
-brew cask install hipchat
-brew cask install iterm2
-brew cask install phpstorm
-mkdir $HOME/Library/Preferences
-cp -R "./pref/PhpStorm201*" "$HOME/Library/Preferences"
-brew cask install parallels-desktop
-brew cask install spotify
-brew cask install sequel-pro
-brew cask install sublime-text
-cp -R "./pref/Sublime Text 3" "$HOME/Library/Application Support"
-brew cask install tunnelblick
-mkdir -p "$HOME/Library/Application Support/Tunnelblick/Configurations"
-cp -R "./pref/Tunnelblick/" "$HOME/Library/Application Support/Tunnelblick/Configurations"
-
-# Better terminal
-brew install zsh zsh-completions
+sh casks_with_settings.sh
+sh casks_without_settings.sh
 
 # Install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
