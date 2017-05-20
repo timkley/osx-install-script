@@ -10,6 +10,9 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 mkdir $HOME/.ssh
 cp -R "./pref/ssh/" "$HOME/.ssh/"
 
+# Some default folders I want
+mkdir $HOME/Code
+
 # Install Homebrew
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 # Update brew to make sure it's up to date
