@@ -13,6 +13,8 @@ phpstorm="PhpStorm2017.1"
 cp -R "$HOME/Library/Preferences/$phpstorm" "./pref"
 # Remove project specific files
 rm -R "./pref/$phpstorm/tasks"
+# Remove weird javascript stuff
+rm -R "./pref/$phpstorm/javascript"
 # Remove recent directories (since this will be new)
 rm "./pref/$phpstorm/options/recentProjectDirectories.xml"
 echo "$phpstorm settings copied."
@@ -25,13 +27,8 @@ echo "Tunnelblick settings copied."
 cp -R "$HOME/Library/Application Support/Alfred 3" "./pref"
 echo "Alfred settings copied."
 
-# Sublime Text 3 settings
-cp -R "$HOME/Library/Application Support/Sublime Text 3" "./pref"
-echo "Sublime Text 3 settings copied."
-
 # iTerm settings
 cp "$HOME/Library/Preferences/com.googlecode.iterm2.plist" "./pref/iTerm/"
-wget "https://github.com/powerline/fonts/blob/master/SourceCodePro/Source Code Pro for Powerline.otf" -P "./pref/iTerm"
 echo "iTerm settings copied."
 
 # dnsmasq
