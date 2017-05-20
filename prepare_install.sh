@@ -2,7 +2,7 @@
 
 # Remove all old preferences
 rm -rf ./pref
-mkdir -p ./pref/{ssh,Tunnelblick,dnsmasq,iTerm}
+mkdir -p ./pref/{ssh,Tunnelblick,dnsmasq}
 
 cp -R "$HOME/.ssh/" "./pref/ssh/"
 echo "SSH settings and keys copied."
@@ -26,10 +26,6 @@ echo "Tunnelblick settings copied."
 # Alfred settings
 cp -R "$HOME/Library/Application Support/Alfred 3" "./pref"
 echo "Alfred settings copied."
-
-# iTerm settings
-cp "$HOME/Library/Preferences/com.googlecode.iterm2.plist" "./pref/iTerm/"
-echo "iTerm settings copied."
 
 # dnsmasq
 # see: https://passingcuriosity.com/2013/dnsmasq-dev-osx/

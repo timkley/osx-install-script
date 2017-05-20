@@ -3,9 +3,6 @@
 brew cask install alfred
 cp -R "./pref/Alfred 3" "$HOME/Library/Application Support"
 
-brew cask install iterm2
-defaults read "./pref/iTerm/com.googlecode.iterm2.plist"
-
 brew cask install phpstorm
 mkdir $HOME/Library/Preferences
 cp -R ./pref/PhpStorm201* "$HOME/Library/Preferences"
