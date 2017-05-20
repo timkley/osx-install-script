@@ -40,4 +40,5 @@ sh casks_with_settings.sh
 sh casks_without_settings.sh
 
 # Install oh-my-zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"# set many OSX settings to my liking
+sh osx_settings.sh
