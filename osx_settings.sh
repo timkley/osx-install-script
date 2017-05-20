@@ -221,8 +221,3 @@ defaults write com.apple.mail DraftsViewerAttributes -dict-add "SortedDescending
 defaults write com.apple.mail DraftsViewerAttributes -dict-add "SortOrder" -string "received-date"
 # Disable inline attachments (just show the icons)
 defaults write com.apple.mail DisableInlineAttachmentViewing -bool true
-
-###############################################################################
-# Disable spotlight and remove shortcut                                       #
-###############################################################################
-sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.metadata.mds.plist
