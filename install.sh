@@ -19,12 +19,19 @@ brew install yarn
 brew install wget
 # Install dnsmasq for better resolution of dev-domains
 brew install dnsmasq
+# copy our dnsmasq-settings over
 cp "./pref/dnsmasq/dnsmasq.conf" "/usr/local/etc/"
 sudo cp -R "./pref/dnsmasq/resolver" "/etc/"
 sudo brew services start dnsmasq
 # Install up to date PHP version
 brew tap homebrew/php
 brew install php71
+# Install mysql and set everything up according to https://gist.github.com/nrollr/3f57fc15ded7dddddcc4e82fe137b58e
+brew install mysql
+brew services start mysql
+# Lets take a deep breath while we wait for the service to be really started before trying to set a new password
+sleep 1
+mysqladmin -u root password 'root'
 
 # For everything not terminal related we install Cask
 brew install cask
