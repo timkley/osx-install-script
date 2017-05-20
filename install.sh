@@ -33,12 +33,18 @@ brew services start mysql
 sleep 1
 mysqladmin -u root password 'root'
 
+# Install an alternative shell, http://fishshell.com in this case
+brew install fish
+# Add fish to the list of allowed shells
+sudo sh -c "echo /usr/local/bin/fish >> /etc/shells"
+# change the shell to fish after the install script has run
+chsh -s /usr/local/bin/fish
+
 # For everything not terminal related we install Cask
 brew install cask
 
 sh casks_with_settings.sh
 sh casks_without_settings.sh
 
-# Install oh-my-zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"# set many OSX settings to my liking
+# set many OSX settings to my liking
 sh osx_settings.sh
