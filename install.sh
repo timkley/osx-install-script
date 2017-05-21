@@ -49,7 +49,7 @@ git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
 sed -i.bak "s/robbyrussell/agnoster/" ~/.zshrc
 # Activate the great z plugin
-sed -i.bak "s/\(git\)/git,z/" ~/.zshrc
+sed -i.bak "s/(git)/(git z)/" ~/.zshrc
 # Remove the backup file
 rm ~/.zshrc.bak
 echo 'DEFAULT_USER="tk"' >> ~/.zshrc
