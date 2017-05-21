@@ -50,6 +50,8 @@ cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
 sed -i.bak "s/robbyrussell/agnoster/" ~/.zshrc
 # Activate the great z plugin
 sed -i.bak "s/(git)/(git z)/" ~/.zshrc
+# Touch the z file to remove an irritating error when first chaging a directory
+touch ~/.z
 # Remove the backup file
 rm ~/.zshrc.bak
 echo 'DEFAULT_USER="tk"' >> ~/.zshrc
@@ -71,3 +73,6 @@ sh casks_without_settings.sh
 
 # set many OSX settings to my liking
 sh osx_settings.sh
+
+# Start Alfred the first time to it can take over the keyboard shortcut
+open -a "Alfred 3"
