@@ -2,10 +2,13 @@
 
 # Remove all old preferences
 rm -rf ./pref
-mkdir -p ./pref/{ssh,Tunnelblick,dnsmasq}
+mkdir -p ./pref/{ssh,shell,Tunnelblick,dnsmasq}
 
 cp -R "$HOME/.ssh/" "./pref/ssh/"
 echo "SSH settings and keys copied."
+
+cp "$HOME/.oh-my-zsh/custom/alias.sh" "./pref/shell"
+echo "Shell settings copied."
 
 # PhpStorm settings (version needs to be adjusted as needed)
 phpstorm="PhpStorm2017.1"

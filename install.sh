@@ -51,6 +51,8 @@ sed -i.bak "s/robbyrussell/agnoster/" ~/.zshrc
 echo 'DEFAULT_USER="tk"' >> ~/.zshrc
 chsh -s /bin/zsh
 
+cp "./pref/shell/alias.sh" "$HOME/.oh-my-zsh/custom/alias.sh"
+
 # Install Source Code Pro powerline font
 git clone https://github.com/powerline/fonts.git
 sh fonts/install.sh "Source Code Pro"
