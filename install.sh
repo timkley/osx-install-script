@@ -22,7 +22,7 @@ brew doctor
 
 # Installing node
 brew install node
-# Using yarn instead of npm as package manager
+# Install yarn
 brew install yarn
 # Install wget as easier nice alternative to CURL
 brew install wget
@@ -45,20 +45,20 @@ mysqladmin -u root password 'root'
 # install zsh
 brew install zsh zsh-completions
 # install oh-my-zsh manually
-git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
-cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
-sed -i.bak "s/robbyrussell/agnoster/" ~/.zshrc
+git clone git://github.com/robbyrussell/oh-my-zsh.git $HOME/.oh-my-zsh
+cp $HOME/.oh-my-zsh/templates/zshrc.zsh-template $HOME/.zshrc
+sed -i.bak "s/robbyrussell/agnoster/" $HOME/.zshrc
 # Activate the great z plugin
-sed -i.bak "s/(git)/(git z)/" ~/.zshrc
-# Touch the z file to remove an irritating error when first chaging a directory
-touch ~/.z
+sed -i.bak "s/(git)/(git z)/" $HOME/.zshrc
+# Touch the z file to remove an irritating error when first changing a directory
+touch $HOME/.z
 # Remove the backup file
-rm ~/.zshrc.bak
-echo 'DEFAULT_USER="tk"' >> ~/.zshrc
+rm $HOME/.zshrc.bak
+echo 'DEFAULT_USER="tk"' >> $HOME/.zshrc
 chsh -s /bin/zsh
 
 cp "./pref/shell/alias.sh" "$HOME/.oh-my-zsh/custom/alias.sh"
-echo 'source $ZSH/custom/alias.sh' >> ~/.zshrc
+echo 'source $ZSH/custom/alias.sh' >> $HOME/.zshrc
 
 # Install Source Code Pro powerline font
 git clone https://github.com/powerline/fonts.git
