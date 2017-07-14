@@ -12,3 +12,4 @@ brew cask install iterm2
 brew cask install parallels-desktop
 brew cask install spotify
 brew cask install sequel-pro
+brew cask install vlc
