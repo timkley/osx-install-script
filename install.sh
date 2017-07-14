@@ -42,6 +42,9 @@ brew services start mysql
 sleep 1
 mysqladmin -u root password 'root'
 
+# install imagemagick
+brew install imagemagick
+
 # install zsh
 brew install zsh zsh-completions
 # install oh-my-zsh manually
