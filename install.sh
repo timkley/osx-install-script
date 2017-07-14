@@ -10,6 +10,9 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 mkdir $HOME/.ssh
 cp -R "./pref/ssh/" "$HOME/.ssh/"
 
+# Copy global gitignore
+cp "./pref/.gitignore_global" "$HOME/"
+
 # Some default folders I want
 mkdir $HOME/Code
 
