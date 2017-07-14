@@ -74,6 +74,9 @@ sh casks_without_settings.sh
 # set many OSX settings to my liking
 sh osx_settings.sh
 
+# set git configuration
+sh git_config.sh
+
 cp -R backup $HOME/backup
 
 # Start Alfred the first time to it can take over the keyboard shortcut
