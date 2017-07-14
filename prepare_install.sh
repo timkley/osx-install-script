@@ -15,11 +15,11 @@ phpstorm="PhpStorm2017.1"
 
 cp -R "$HOME/Library/Preferences/$phpstorm" "./pref"
 # Remove project specific files
-rm -R "./pref/$phpstorm/tasks"
+rm -R "./pref/$phpstorm/tasks" 2> /dev/null
 # Remove weird javascript stuff
-rm -R "./pref/$phpstorm/javascript"
+rm -R "./pref/$phpstorm/javascript" 2> /dev/null
 # Remove recent directories (since this will be new)
-rm "./pref/$phpstorm/options/recentProjectDirectories.xml"
+rm "./pref/$phpstorm/options/recentProjectDirectories.xml" 2> /dev/null
 echo "$phpstorm settings copied."
 
 # Tunnelblick configurations
