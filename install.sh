@@ -6,6 +6,9 @@ sudo -v
 # Keep-alive: update existing `sudo` time stamp until `.macos` has finished
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
+# Install xcode-select
+xcode-select --install
+
 # Copy SSH Keys
 mkdir $HOME/.ssh
 cp -R "./pref/ssh/" "$HOME/.ssh/"
@@ -18,10 +21,6 @@ mkdir $HOME/Code
 
 # Install Homebrew
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-# Update brew to make sure it's up to date
-brew update
-# Just to be sure everything's ready
-brew doctor
 
 # Installing node
 brew install node
@@ -29,14 +28,7 @@ brew install node
 npm i -g n
 # Install yarn
 brew install yarn
-# Install wget as easier nice alternative to CURL
-brew install wget
-# Install dnsmasq for better resolution of dev-domains
-brew install dnsmasq
-# copy our dnsmasq-settings over
-cp "./pref/dnsmasq/dnsmasq.conf" "/usr/local/etc/"
-sudo cp -R "./pref/dnsmasq/resolver" "/etc/"
-sudo brew services start dnsmasq
+# Install most current PHP 7 version
 brew install php7
 # Install mysql and set everything up according to https://gist.github.com/nrollr/3f57fc15ded7dddddcc4e82fe137b58e
 brew install mysql@5.7
