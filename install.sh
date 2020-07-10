@@ -25,6 +25,8 @@ brew doctor
 
 # Installing node
 brew install node
+# Install n helper to switch between node versions
+npm i -g n
 # Install yarn
 brew install yarn
 # Install wget as easier nice alternative to CURL
@@ -35,13 +37,12 @@ brew install dnsmasq
 cp "./pref/dnsmasq/dnsmasq.conf" "/usr/local/etc/"
 sudo cp -R "./pref/dnsmasq/resolver" "/etc/"
 sudo brew services start dnsmasq
-# Install up to date PHP version
-brew tap homebrew/php
-brew install php71
+brew install php7
 # Install mysql and set everything up according to https://gist.github.com/nrollr/3f57fc15ded7dddddcc4e82fe137b58e
-brew install mysql
+brew install mysql@5.7
 brew services start mysql
 # Lets take a deep breath while we wait for the service to be really started before trying to set a new password
+brew link mysql@5.7 --force
 sleep 1
 mysqladmin -u root password 'root'
 
@@ -70,9 +71,6 @@ echo 'source $ZSH/custom/alias.sh' >> $HOME/.zshrc
 git clone https://github.com/powerline/fonts.git
 sh fonts/install.sh "Source Code Pro"
 rm -rf fonts
-
-# For everything not terminal related we install Cask
-brew install cask
 
 sh casks_with_settings.sh
 sh casks_without_settings.sh
