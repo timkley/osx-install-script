@@ -41,6 +41,9 @@ mysqladmin -u root password 'root'
 # install imagemagick
 brew install imagemagick
 
+# install tig
+brew install tig
+
 # install zsh
 brew install zsh zsh-completions
 # install oh-my-zsh manually
