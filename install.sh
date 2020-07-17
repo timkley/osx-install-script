@@ -44,6 +44,9 @@ brew install imagemagick
 # install tig
 brew install tig
 
+# install composer
+brew install composer
+
 # install zsh
 brew install zsh zsh-completions
 # install oh-my-zsh manually
